@@ -6,7 +6,7 @@ SOURCS = megaphone.cpp
 
 OBJS = ${SOURCS:.cpp=.o}
 
-%.o : %.c
+%.o : %.cpp
 	c++ ${FLAGS} -cpp $< -o $@
 
 all : ${NAME}
