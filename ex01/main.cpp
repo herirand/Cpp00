@@ -20,9 +20,11 @@ int	main( void )
 	
 	while (true)
 	{
+		std::cout << "*ADD* to add contact  or *SEARCH* to search contact or *EXIT* to finish" << std::endl;
 		std::getline(std::cin, buff);
 		if (buff == "ADD")
 		{
+			std::cout << "*ADD*" << std::endl;
 			instance.get_firstname(i);
 			instance.get_latsname(i);
 			instance.get_nickname(i);
@@ -36,8 +38,10 @@ int	main( void )
 			instance.print_contact();
 			instance.search_contact();
 		}
-		if (buff == "EXIT")
+		else if (buff == "EXIT")
 			break;
+		else
+			std::cout << "Input invalid" << std::endl;
 	}
 	return (0);
 }

@@ -14,6 +14,7 @@
 #define  PHONEBOOK_HPP
 
 #include "Contact.hpp"
+#include <string>
 
 class PhoneBook{
 	private:
@@ -29,6 +30,8 @@ class PhoneBook{
 		void	get_darkestsecret(int i);
 		void	print_contact(void);
 		void	search_contact(void);
+		void	print_error(std::string name, std::string str);
+		bool	my_isdigit(std::string str);
 };
 
-#endif // !PHON
+#endif
