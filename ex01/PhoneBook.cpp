@@ -30,7 +30,6 @@ void	PhoneBook::get_firstname( int i )
 
 	std::cout << "FIRSTNAME : ";
 	std::getline(std::cin, firstname);
-	std::cout << std::endl;
 	this->contact[i % 8].take_firstname(firstname, i);
 	// this->contact[i].index = i;
 }
@@ -41,7 +40,6 @@ void	PhoneBook::get_latsname( int i )
 
 	std::cout << "LASTNAME : ";
 	std::getline(std::cin, lastname);
-	std::cout << std::endl;
 	this->contact[i % 8].take_lastname(lastname);
 }
 
@@ -51,7 +49,6 @@ void	PhoneBook::get_nickname(int i)
 
 	std::cout << "NICKNAME : ";
 	std::getline(std::cin, nickname);
-	std::cout << std::endl;
 	this->contact[i % 8].take_nickname(nickname);
 }
 
@@ -61,7 +58,6 @@ void	PhoneBook::get_phonenumber( int i )
 
 	std::cout << "PHONENUMBER : ";
 	std::getline(std::cin, phonenumber);
-	std::cout << std::endl;
 	this->contact[i % 8].take_phonenumber(phonenumber);
 }
 
@@ -71,7 +67,6 @@ void	PhoneBook::get_darkestsecret( int i )
 
 	std::cout << "DARKESTSECRET : ";
 	std::getline(std::cin, secret);
-	std::cout << std::endl;
 	this->contact[i % 8].take_darkestsecret(secret);
 }
 
@@ -93,11 +88,10 @@ void	PhoneBook::search_contact(void)
 	int	indx;
 	std::string str;
 	
-	indx = 0;
-	std::cout << "index : ";
+	indx = -1;
+	std::cout << "*SEARCH*" << "\n" << "index : ";
 	std::getline(std::cin, str);
-	std::stringstream ss(str);
-	ss >> indx;
+	indx = str[0] - 48;
 	// std::cout << " str == " << str << std::endl;
 	// std::cout << "indx == " << indx << std::endl;
 	if (indx < 0 || indx > 8)
@@ -107,5 +101,4 @@ void	PhoneBook::search_contact(void)
 	}
 	std::cout << "index	|	first_name	|	last_name	|	nickname" << std::endl;
 	this->contact[indx].print_contact();
-	// this->contact[indx].take_contactindex();
 }
