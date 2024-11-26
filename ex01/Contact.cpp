@@ -20,21 +20,11 @@ Contact::Contact(void)
 
 void	Contact::take_firstname(std::string str, int i)
 {
-	// int	j;
-
 	if (str.length() > 10)
 	{
 		std::cout << str.substr(0, 9);
 		std::cout << "ato \n" << "\n";
 		this->first_name = str.substr(0, 9);
-		// j = 0;
-		// while (str[j] && j < 10)
-		// {
-		// 	this->first_name[j] = str[j];
-		// 	j ++;
-		// }
-		// this->first_name[j] = '.';
-
 	}
 	else
 		this->first_name = str;
