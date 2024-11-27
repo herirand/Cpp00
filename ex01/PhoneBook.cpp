@@ -151,6 +151,7 @@ void	PhoneBook::search_contact(void)
 		std::cout << "contact non trouver " << std::endl;
 		return;
 	}
-	std::cout << "index	|	first_name	|	last_name	|	nickname" << std::endl;
+	std::cout << std::setw(10)  << "index" << "|" << std::setw(10)  << "firstname" << "|"
+		<< std::setw(10)<< "lastname" << "|" << std::setw(10)<< "nickname" << "|" <<std::endl;
 	this->contact[indx].print_contact();
 }
